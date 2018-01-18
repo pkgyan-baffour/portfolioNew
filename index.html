@@ -121,13 +121,29 @@ Colors that are opposite each other on the colour wheel and are considered to be
   <!-- First Photo Grid-->
   
 <style>
-video {
-    width: 100%;
-    height: auto;
+.rwd-media {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
 }
+
+.rwd-media iframe,
+.rwd-media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+}
+
+
+body { background: #ddd; margin: 0; }
+
+.content { width: 50%; padding: 2em; background: #fff; }
+
 </style>
   
-    <div class="w3-third w3-container">
+    <div class="content">
+    <div class="rwd-media">
      <iframe src="https://player.vimeo.com/video/212319733" width="640" 
      height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
       </iframe></div>
@@ -162,15 +178,9 @@ video {
   
   
 <hr>
-  <iframe src="https://player.vimeo.com/video/210347390" width="400" height="120" style="float:left 
-          frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-  </iframe>
-  <br>
- <iframe src="https://player.vimeo.com/video/212319733" width="400" height="120" style="float:right
-         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-  </iframe> 
+
   
-  <hr>
+ 
   <img src="Compositing Task.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
       <p><b>Photos</b></p>
